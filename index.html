@@ -10,10 +10,19 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
 <script type="text/javascript">
 $(document).ready(function(){
+	
+	$('input').keypress(function(e){
+		if(e.which == 13){ // enter key
+			println("You typed some stuff: " + $('input').val());
+			$('input').val('');
+		}
+	});
 	var game = new AdventureGame();
 	game.play();
 });
 
+// This is supposed to be similar to the acm println method. It appends to the console
+// and makes sure it is scrolled to the bottom.
 function println(str){
 	var prev = $("#console").html();
 	$("#console").html(prev + "<div>" + str + "</div>");
@@ -36,7 +45,7 @@ function AdvMotionTableEntry(){
 
 function AdventureGame(){
 	this.play = function(){
-		for(i = 0; i < 40; i++)
+		//for(i = 0; i < 40; i++)
 			println("You are at a crossroads. What do you want to do?");
 		println("Come on...");
 
@@ -67,7 +76,7 @@ function AdventureGame(){
 }
 
 input{
-	width: 300px;
+	width: 600px;
 	height: 30px;
 	padding: 5px;
 	font-size: 13px;
