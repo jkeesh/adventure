@@ -513,6 +513,9 @@
             inner.append(mesg);
             mesg.show();
         };
+        
+        // Export message as println to the client
+        extern.println = message;
 
         ////////////////////////////////////////////////////////////////////////
         // Handle normal character insertion

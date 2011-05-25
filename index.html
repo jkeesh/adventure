@@ -16,13 +16,14 @@ $(document).ready(function(){
 	/* Second console */
     var console2 = $('<div class="console2">');
     $('#wrapper').append(console2);
-    var controller2 = console2.console({
+     controller2 = console2.console({
       promptLabel: '> ',
       commandValidate:function(line){
         if (line == "") return false;
         else return true;
       },
       commandHandle:function(line){
+			//message("tester");
           try { var ret = eval(line);
                 if (typeof ret != 'undefined') return ret.toString();
                 else return true; }
@@ -33,6 +34,8 @@ $(document).ready(function(){
       welcomeMessage:'Welcome to the Ethics Adventure Game. This just evaluates javascript.'
     });
 
+	//how to use println
+	//controller2.println("test");
 	var game = new AdventureGame();
 	game.play();
 
