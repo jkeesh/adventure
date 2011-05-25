@@ -35,14 +35,11 @@ $(document).ready(function(){
     });
 
 	//how to use println
-	//controller2.println("test");
+	//println("test");
 	var game = new AdventureGame();
 	game.play();
 
 });
-
-function println(str){
-}
 
 function readLine(str){
 
@@ -62,10 +59,10 @@ function AdvMotionTableEntry(){
 
 function AdventureGame(){
 	this.play = function(){
-		for(i = 0; i < 400; i++)
-			println("You are at a crossroads. What do you want to do?");
+		//for(i = 0; i < 400; i++)
+		//	println("You are at a crossroads. What do you want to do?");
 		println("Come on...");
-		readLine(">");
+		// readLine(">");
 	}
 }
 

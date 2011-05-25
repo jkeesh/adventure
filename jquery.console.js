@@ -515,7 +515,7 @@
         };
         
         // Export message as println to the client
-        extern.println = message;
+        window.println = message;
 
         ////////////////////////////////////////////////////////////////////////
         // Handle normal character insertion
