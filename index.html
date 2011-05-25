@@ -17,6 +17,7 @@ $(document).ready(function(){
 function println(str){
 	var prev = $("#console").html();
 	$("#console").html(prev + "<div>" + str + "</div>");
+	$("#console").scrollTop($("#console").height());
 }
 
 
@@ -35,7 +36,8 @@ function AdvMotionTableEntry(){
 
 function AdventureGame(){
 	this.play = function(){
-		println("You are at a crossroads. What do you want to do?");
+		for(i = 0; i < 40; i++)
+			println("You are at a crossroads. What do you want to do?");
 		println("Come on...");
 
 	}
@@ -61,7 +63,7 @@ function AdventureGame(){
 	padding: 5px;
 	height: 400px;
 	border: 1px solid black;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 input{
