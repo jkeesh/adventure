@@ -30,6 +30,11 @@ function println(str){
 	$("#console").scrollTop($("#console").height());
 }
 
+// For the purposes of our console, readline is just like println, since they will be
+// entering text from the one text field.
+function readLine(str){
+	println(str);
+}
 
 
 function AdvObject(){
@@ -49,7 +54,7 @@ function AdventureGame(){
 		//for(i = 0; i < 40; i++)
 			println("You are at a crossroads. What do you want to do?");
 		println("Come on...");
-
+		readLine(">");
 	}
 }
 
