@@ -431,8 +431,9 @@
         };
 
         // Scroll to the bottom of the view
+        // Jeremy had to modify this to get it to work... 
         function scrollToBottom() {
-            inner.attr({ scrollTop: inner.attr("scrollHeight") });;
+            inner.scrollTop(inner[0].scrollHeight);
         };
 
 	function cancelExecution() {
