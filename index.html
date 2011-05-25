@@ -1,0 +1,90 @@
+<html>
+
+<head>
+	
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var game = new AdventureGame();
+	game.play();
+});
+
+function println(str){
+	var prev = $("#console").html();
+	$("#console").html(prev + "<div>" + str + "</div>");
+}
+
+
+
+function AdvObject(){
+	
+}
+
+function AdvRoom(){
+	
+}
+
+function AdvMotionTableEntry(){
+	
+}
+
+function AdventureGame(){
+	this.play = function(){
+		println("You are at a crossroads. What do you want to do?");
+		println("Come on...");
+
+	}
+}
+
+
+
+
+</script>
+	
+	
+<style>
+*{
+	font-family: Helvetica;
+}
+
+#wrapper{
+	width: 600px;
+	margin: auto;
+}
+
+#console{
+	padding: 5px;
+	height: 400px;
+	border: 1px solid black;
+	overflow: hidden;
+}
+
+input{
+	width: 300px;
+	height: 30px;
+	padding: 5px;
+	font-size: 13px;
+	margin-top: 10px;
+}
+</style>
+	
+	
+	<title>
+		Press Freedom for Bloggers
+	</title>
+</head>
+
+
+
+<div id="wrapper">
+	<h1>Press Freedom for Bloggers</h1>
+	<h2>Eric Conner, Zach Galant, and Jeremy Keeshin</h2>
+
+<div id="console">
+	
+</div>
+
+<input type="text" id="response" />
+
+</div>
+</html>
