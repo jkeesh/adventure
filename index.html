@@ -27,9 +27,8 @@ $(document).ready(function(){
 function println(str){
 	var prev = $("#console").html();
 	$("#console").html(prev + "<div>" + str + "</div>");
-	$("#console").scrollTop($("#console").height());
+	$("#console").scrollTop($("#console")[0].scrollHeight);
 }
-
 // For the purposes of our console, readline is just like println, since they will be
 // entering text from the one text field.
 function readLine(str){
@@ -38,7 +37,7 @@ function readLine(str){
 
 
 function AdvObject(){
-	
+
 }
 
 function AdvRoom(){
@@ -51,7 +50,7 @@ function AdvMotionTableEntry(){
 
 function AdventureGame(){
 	this.play = function(){
-		//for(i = 0; i < 40; i++)
+		for(i = 0; i < 400; i++)
 			println("You are at a crossroads. What do you want to do?");
 		println("Come on...");
 		readLine(">");
