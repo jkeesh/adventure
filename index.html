@@ -14,9 +14,9 @@ $(document).ready(function(){
     });
     
 	/* Second console */
-    var console2 = $('<div class="console2">');
-    $('#wrapper').append(console2);
-    var controller2 = console2.console({
+    var console = $('<div class="console">');
+    $('#wrapper').append(console);
+    var controller = console.console({
       promptLabel: '> ',
       commandValidate:function(line){
         if (line == "") return false;
@@ -24,22 +24,22 @@ $(document).ready(function(){
       },
       commandHandle:function(line){
           try { 
-              return line;
-          } catch (e) { 
-              return e.toString(); 
-          }
+				println(line);
+				var ret = eval(line);
+                if (typeof ret != 'undefined') return ret.toString();
+                else return true; }
+          catch (e) { return e.toString(); }
       },
       animateScroll:true,
       promptHistory:true,
       welcomeMessage:'Welcome to the Ethics Adventure Game. This just evaluates javascript.'
     });
 
+	//how to use println
+	//println("test");
 	var game = new AdventureGame();
 	game.play();
 });
-
-function println(str){
-}
 
 function readLine(str){
 
@@ -59,10 +59,9 @@ function AdvMotionTableEntry(){
 
 function AdventureGame(){
 	this.play = function(){
-		for(i = 0; i < 400; i++)
-			println("You are at a crossroads. What do you want to do?");
-		println("Come on...");
-		readLine(">");
+		//for(i = 0; i < 400; i++)
+		//	println("You are at a crossroads. What do you want to do?");
+		// readLine(">");
 	}
 }
 
@@ -97,21 +96,21 @@ input{
 	margin-top: 10px;
 }
 
-div.console2 { font-size: 14px; margin-top:1em }
- div.console2 div.jquery-console-inner 
+div.console { font-size: 14px; margin-top:1em }
+ div.console div.jquery-console-inner 
   { width:600px; height:200px; background:#efefef; padding:0.5em;
     overflow:auto }
- div.console2 div.jquery-console-prompt-box
+ div.console div.jquery-console-prompt-box
   { color:#444; font-family:monospace; }
- div.console2 div.jquery-console-focus span.jquery-console-cursor 
+ div.console div.jquery-console-focus span.jquery-console-cursor 
   { background:#333; color:#eee; font-weight:bold }
- div.console2 div.jquery-console-message-error
+ div.console div.jquery-console-message-error
   { color:#ef0505; font-family:sans-serif; font-weight:bold;
     padding:0.1em; }
- div.console2 div.jquery-console-message-success
+ div.console div.jquery-console-message-success
   { color:#187718; font-family:monospace;
     padding:0.1em; }
- div.console2 span.jquery-console-prompt-label { font-weight:bold }
+ div.console span.jquery-console-prompt-label { font-weight:bold }
 
 </style>
 	
