@@ -1,18 +1,18 @@
 <html>
-
 <head>
-	
 	<!-- Questions to consider:
 		How should we store the files? Should it be exactly the same as the cs106a assignment?
 		What do we even want the game to do? -->
-	
-	
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
 <script type="text/javascript" src="jquery.console.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
-		
+    
+    $.getJSON("TinyRooms.json.js", function(data) {
+        console.info(data)
+    });
+    
 	/* Second console */
     var console2 = $('<div class="console2">');
     $('#wrapper').append(console2);
@@ -23,10 +23,11 @@ $(document).ready(function(){
         else return true;
       },
       commandHandle:function(line){
-          try { var ret = eval(line);
-                if (typeof ret != 'undefined') return ret.toString();
-                else return true; }
-          catch (e) { return e.toString(); }
+          try { 
+              return line;
+          } catch (e) { 
+              return e.toString(); 
+          }
       },
       animateScroll:true,
       promptHistory:true,
@@ -35,7 +36,6 @@ $(document).ready(function(){
 
 	var game = new AdventureGame();
 	game.play();
-
 });
 
 function println(str){
@@ -114,7 +114,6 @@ div.console2 { font-size: 14px; margin-top:1em }
  div.console2 span.jquery-console-prompt-label { font-weight:bold }
 
 </style>
-	
 	
 	<title>
 		Press Freedom for Bloggers
