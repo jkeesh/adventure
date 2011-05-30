@@ -26,9 +26,6 @@ AdventureGame.prototype.readRooms = function(roomArr) {
             self.motions.push(motion.direction);
       });
    });
-   
-   window.console.info(this.rooms["1"]);
-   window.console.info(this);
 }
 
 AdventureGame.prototype.readObjects = function(objArr) {
@@ -37,8 +34,4 @@ AdventureGame.prototype.readObjects = function(objArr) {
    $(roomArr).each(function(idx) {
       self.objects.push(new AdvRoom(roomArr[idx]));
    });
-}
-
-AdventureGame.prototype.handleCommand = function(cmd) {
-   
 }

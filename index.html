@@ -10,17 +10,11 @@
 <script type="text/javascript" src="AdvMotionTableEntry.js"></script>
 <script type="text/javascript" src="AdvRoom.js"></script>
 <script type="text/javascript" src="AdventureGame.js"></script>
+<script type="text/javascript" src="Adventure.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
-    
-    var game = new AdventureGame();
-    $.getJSON("TinyRooms.json.js", function(data) {
-        game.readRooms(data);
-    });
-    $.getJSON("SmallObjects.json.js", function(data) {
-        window.console.log(data);
-    });
+
     
 	/* Second console */
     var console = $('<div class="console">');
@@ -32,7 +26,7 @@ $(document).ready(function(){
         else return true;
       },
       commandHandle:function(line){
-          println(line);
+          Adventure.handleCommand(line);
           return true;
       },
       animateScroll:true,
