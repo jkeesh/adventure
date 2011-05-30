@@ -6,10 +6,19 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
 <script type="text/javascript" src="jquery.console.js"></script>
 
+<script type="text/javascript" src="AdvObject.js"></script>
+<script type="text/javascript" src="AdvMotionTableEntry.js"></script>
+<script type="text/javascript" src="AdvRoom.js"></script>
+<script type="text/javascript" src="AdventureGame.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){
     
+    var game = new AdventureGame();
     $.getJSON("TinyRooms.json.js", function(data) {
+        game.readRooms(data);
+    });
+    $.getJSON("SmallObjects.json.js", function(data) {
         window.console.log(data);
     });
     
@@ -23,51 +32,16 @@ $(document).ready(function(){
         else return true;
       },
       commandHandle:function(line){
-          try { 
-				println(line);
-				var ret = eval(line);
-                if (typeof ret != 'undefined') return ret.toString();
-                else return true; }
-          catch (e) { return e.toString(); }
+          println(line);
+          return true;
       },
       animateScroll:true,
       promptHistory:true,
       welcomeMessage:'Welcome to the Ethics Adventure Game. This just evaluates javascript.'
     });
 
-	//how to use println
-	//println("test");
-	var game = new AdventureGame();
-	game.play();
+
 });
-
-function readLine(str){
-
-}
-
-function AdvObject(){
-
-}
-
-function AdvRoom(){
-	
-}
-
-function AdvMotionTableEntry(){
-	
-}
-
-function AdventureGame(){
-	this.play = function(){
-		//for(i = 0; i < 400; i++)
-		//	println("You are at a crossroads. What do you want to do?");
-		// readLine(">");
-	}
-}
-
-
-
-
 </script>
 	
 	
