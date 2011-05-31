@@ -14,7 +14,6 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-
     
 	/* Second console */
     var console = $('<div class="console">');
@@ -31,10 +30,9 @@ $(document).ready(function(){
       },
       animateScroll:true,
       promptHistory:true,
-      welcomeMessage:'Welcome to the Ethics Adventure Game. This just evaluates javascript.'
+          // output description for default room
+      welcomeMessage:'Welcome to the Ethics Adventure Game.\n' + Adventure.currentRoom.description
     });
-
-
 });
 </script>
 	

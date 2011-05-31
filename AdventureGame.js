@@ -6,7 +6,7 @@
 */
 function AdventureGame() {
    this.rooms = {};      // associative array of roomId => room object
-   this.objects = null;  // array of AdvObjects
+   this.objects = [];  // array of AdvObjects
    this.synonyms = null; // associative array of strings synonym => synonym
    this.motions = [];    // array of string motion commands in game
 }
@@ -28,10 +28,20 @@ AdventureGame.prototype.readRooms = function(roomArr) {
    });
 }
 
+/*
+* Read objects from a json array
+*/
 AdventureGame.prototype.readObjects = function(objArr) {
    var self = this;       // reference to this class when scope of "this" changes
    
-   $(roomArr).each(function(idx) {
-      self.objects.push(new AdvRoom(roomArr[idx]));
+   $(objArr).each(function(idx, val) {
+      var curAdvObj = new AdvObject(val);
+      
+      self.objects.push(curAdvObj);
+      
+      // add object to its initial room
+      self.rooms[curAdvObj.initialRoomId].addObject(curAdvObj);
    });
+   
+   console.info(this.rooms);
 }
