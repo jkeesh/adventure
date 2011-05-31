@@ -662,8 +662,9 @@
         return extern;
     };
     // Simple utility for printing messages
+    // change filled text method to export html instead of plain text
     $.fn.filledText = function(txt){
-        $(this).text(txt);
+        $(this).html(txt);
         $(this).html($(this).html().replace(/\n/g,'<br/>'));
         return this;
     };

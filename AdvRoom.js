@@ -34,7 +34,7 @@ AdvRoom.prototype.objectStr = function() {
    var objStr = "";
    for(key in this.objects) {
       obj = this.objects[key];
-      objStr += "There is a " + obj.description + " here.\n"
+      objStr += "There is " + obj + " here.\n"
    }
    return objStr;
 }
