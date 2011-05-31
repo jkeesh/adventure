@@ -25,6 +25,7 @@ $.getJSON("TinyRooms.json.js", function(data) {
     
     // set default room
     Adventure.currentRoom = Adventure.game.rooms["1"];
+    $(document).trigger('startGame');
 });
 
 // read in the objects
