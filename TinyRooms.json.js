@@ -63,7 +63,7 @@
    {
       "id": "7",
       "name": "The WikiLeaks headquarters in Stockholm, Sweden",
-      "description": "You are 100 feet below ground in a room with green plants, solar lighting, and a buzzing humidifier. This room only has one entrance. Leave to the south. Or exit west.",
+      "description": "You are at the WikiLeaks headquarters in Stockholm, Sweden. You are 100 feet below ground in a room with green plants, solar lighting, and a buzzing humidifier. This room only has one entrance. Leave to the south. Or exit west.",
       "motions": [
          {"dir": "SOUTH", "dest": "8"},
          {"dir": "WEST", "dest": "6"}
@@ -83,7 +83,7 @@
    {
       "id": "9",
       "name": "At the Apple Headquarters",
-      "description": "You are walking by a clean desk, and on it are the slides of a presentation labeled classified. You can go home to the south.",
+      "description": "You are at the Apple Headquarters. You walk by a clean desk, and on it are the slides of a presentation labeled classified. You can go home to the south.",
       "motions": [
          {"dir": "EAST", "dest": "8"},
          {"dir": "SOUTH", "dest": "13"}
