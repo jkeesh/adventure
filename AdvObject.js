@@ -11,6 +11,10 @@ function AdvObject(obj) {
    this.initialRoomId = obj.initialLoc;
 }
 
+AdvObject.prototype.getInfo = function(){
+    //return $()
+}
+
 AdvObject.prototype.toString = function() {
    // print the description with a span so colors can be added
    return "<span class='item'>" + this.description + "</span>"

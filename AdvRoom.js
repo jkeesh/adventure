@@ -9,6 +9,7 @@ function AdvRoom(roomObj) {
 	this.id = roomObj.id;
 	this.name = roomObj.name;
 	this.description = roomObj.description;
+	this.info = roomObj.info;
 	this.visited = false;
 	
 	this.motions = [];
@@ -19,6 +20,10 @@ function AdvRoom(roomObj) {
 	this.objects = {};
 	this.people = {};
 	this.hasPerson = false;
+}
+
+AdvRoom.prototype.getInfo = function(){
+    return $("#"+this.info).html();
 }
 
 AdvRoom.prototype.addPerson = function(person){

@@ -25,18 +25,24 @@ $.getJSON("TinyRooms.json.js", function(data) {
     
     // set default room
     Adventure.currentRoom = Adventure.game.rooms["1"];
-    $(document).trigger('startGame');
+ 
     // read in the objects
     $.getJSON("SmallObjects.json.js", function(data) {
         Adventure.game.readObjects(data);
+        
+        $.getJSON("SmallPeople.json.js", function(data){
+            Adventure.game.readPeople(data);
+            
+            $(document).trigger('startGame');
+        })
     });
-    $.getJSON("SmallPeople.json.js", function(data){
-        Adventure.game.readPeople(data);
-    })
+
 });
 
 
-
+Adventure.setInfo = function(info){
+    $("#extra-container").html(info);
+}
 
 
 /*
@@ -127,6 +133,8 @@ Adventure.handleMotionCommand = function(cmd) {
          println(Adventure.currentRoom.objectStr());
          if(Adventure.currentRoom.hasPerson)
             println("Someone is here.");
+         Adventure.setInfo(Adventure.currentRoom.getInfo());
+
          
          // set flag indicating room changed
          roomChanged = true;
