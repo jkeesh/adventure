@@ -14,7 +14,7 @@
    {
       "id": "2",
       "name": "End of road",
-      "description": "You are at the end of a road at the top of a small hill. You can see a small building in the valley to the east.",
+      "description": "You are at the end of a road at the top of a small hill.  It is the year 1688.  The Glorious Revolution has just occurred in England.  On your journey through the valley you published a pamphlet criticizing the monarchy and have been tried for seditious libel.  Luckily this is a period of revolution and several influential philosophers are around to help you out.",
       "motions": [
          {"dir": "DOWN", "dest": "1"},
          {"dir": "EAST", "dest": "1"}
