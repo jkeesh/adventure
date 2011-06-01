@@ -16,6 +16,21 @@
 <link rel="stylesheet" href="style.css" type="text/css" />
 
 <script type="text/javascript">
+$(document).ready(function(){
+	$("#expand").bind('click', function(){
+		if($(this).html() == "Show All"){
+			$(".invisible").removeClass("invisible").addClass("shown");
+			$("#extra-container").hide();
+			$(this).html("Hide All");
+		}else{
+			$(".shown").removeClass("shown").addClass("invisible");
+			$("#extra-container").show();
+			$(this).html("Show All");
+			
+		}
+	});
+});
+
 $(document).bind('startGame', function(){
 	/* Second console */
 	var console = $(".console");
@@ -58,12 +73,15 @@ $(document).bind('startGame', function(){
 	<h1>Press Freedom for Bloggers</h1>
 	<h2>Eric Conner, Zach Galant, and Jeremy Keeshin</h2>
 	<div class="console"></div>
+	<div>
+	</div>
 	<div id="extra-container" class="extra">
 	    <h1>What is Press Freedom For Bloggers?</h1>
         <div class="info-paragraph">
 			That's a really good question, and that's what this website is here for. Here we have the ETHICAL ADVENTURE game, where you can explore the history of and some important legal cases relating to press freedom for bloggers. 
         </div>
 	</div>
+	<a href="#" id="expand">Show All</a>
 	
 	<div id="overview" class="extra">
 	    <h1>Overview linked</h1>
@@ -293,6 +311,24 @@ $(document).bind('startGame', function(){
 	</div>
 	<!-- end room 12-->
 	
+	<!-- room 15 -->
+    <div id="paine" class="invisible">
+        <h1>Thomas Paine</h1>
+        <div class="info-paragraph">
+	            <img class="body-im" src="http://blog.syracuse.com/news/2009/08/thomas_paine1.jpg" width="150px" />
+	
+			Thomas Paine was one of the founding fathers of the United States and the author of a pamphlet called Common Sense. He wrote the anti-British pamphlet in 1776 and distributed it throughout the British colonies in America.
+        </div>
+        <div class="info-paragraph">
+			The pamphlet contributed to the idea of revolution and democracy. Thomas Paine can be compared to a blogger because he anonymously published his opinions differently than a traditional journalist.	
+        </div>
+        <div class="info-paragraph">
+			Paine was a precursor to the revolutionaries in Iran, Libya, and Egypt who used blogging to spur a revolution.
+        </div>
+
+	</div>
+	<!-- end room 15-->
+	
 	<!-- room 13 -->
     <div id="references" class="invisible">
         <h1>References</h1>
@@ -345,22 +381,6 @@ $(document).bind('startGame', function(){
 	<!-- end room 13-->
 	
 	
-	<!-- room 15 -->
-    <div id="paine" class="invisible">
-        <h1>Thomas Paine</h1>
-        <div class="info-paragraph">
-	            <img class="body-im" src="http://blog.syracuse.com/news/2009/08/thomas_paine1.jpg" width="150px" />
-	
-			Thomas Paine was one of the founding fathers of the United States and the author of a pamphlet called Common Sense. He wrote the anti-British pamphlet in 1776 and distributed it throughout the British colonies in America.
-        </div>
-        <div class="info-paragraph">
-			The pamphlet contributed to the idea of revolution and democracy. Thomas Paine can be compared to a blogger because he anonymously published his opinions differently than a traditional journalist.	
-        </div>
-        <div class="info-paragraph">
-			Paine was a precursor to the revolutionaries in Iran, Libya, and Egypt who used blogging to spur a revolution.
-        </div>
 
-	</div>
-	<!-- end room 15-->
 </div>
 </html>
