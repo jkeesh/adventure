@@ -147,26 +147,39 @@ function isEmptyObj(o) {
     return true;
 }
 
+Adventure.hasRequiredKeys = function(keys) {
+   for(var idx in keys) {
+      if(!Adventure.inventory.hasOwnProperty(keys[idx])) {
+         return false;
+      }
+   }
+   return true;
+}
+
 Adventure.handleMotionCommand = function(cmd) {
-   var roomChanged = false;
+   var correctDir = false;
    
    $(Adventure.currentRoom.motions).each(function(idx, val) {
       // user entered a valid direction so change the room
       if(cmd == val.direction) {
-         Adventure.currentRoom = Adventure.game.rooms[val.destRoomId];
-         // display info about new room
-         Adventure.currentRoom.describe();
-         if(Adventure.currentRoom.hasPerson)
-            println("Someone is here.");
-         Adventure.setInfo(Adventure.currentRoom.getInfo());
-
+         correctDir = true;
          
-         // set flag indicating room changed
-         roomChanged = true;
+         // make sure user has required keys or room unlocked
+         if(val.keysRequired.length == 0 || Adventure.hasRequiredKeys(val.keysRequired)) {
+            Adventure.currentRoom = Adventure.game.rooms[val.destRoomId];
+            // display info about new room
+            Adventure.currentRoom.describe();
+            if(Adventure.currentRoom.hasPerson)
+               println("Someone is here.");
+            Adventure.setInfo(Adventure.currentRoom.getInfo());
+         } else {
+            println("You do not have the right tools in your inventory to go that direction.")
+         }
+
       }
    });
    
-   if(!roomChanged) {
+   if(!correctDir) {
       println("You cannot go that direction here.");
    }
 }
