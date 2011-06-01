@@ -6,7 +6,7 @@
    },
    {
       "name": "TIME MACHINE",
-      "description": "a delorean dmc-12",
+      "description": "a time machine that look like a delorean dmc-12",
       "initialLoc": "1"
    },
    {
