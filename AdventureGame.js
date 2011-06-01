@@ -29,6 +29,20 @@ AdventureGame.prototype.readRooms = function(roomArr) {
 }
 
 /*
+* Read people from json array
+*/
+AdventureGame.prototype.readPeople = function(peopleArr){
+    var self = this;
+    
+    $(peopleArr).each(function(idx, val){
+        console.log(idx);
+        console.log(val);
+        var curPerson = new AdvPerson(val);
+        console.log(curPerson);
+    });
+}
+
+/*
 * Read objects from a json array
 */
 AdventureGame.prototype.readObjects = function(objArr) {

@@ -26,12 +26,18 @@ $.getJSON("TinyRooms.json.js", function(data) {
     // set default room
     Adventure.currentRoom = Adventure.game.rooms["1"];
     $(document).trigger('startGame');
+    // read in the objects
+    $.getJSON("SmallObjects.json.js", function(data) {
+        Adventure.game.readObjects(data);
+    });
+    $.getJSON("SmallPeople.json.js", function(data){
+        Adventure.game.readPeople(data);
+    })
 });
 
-// read in the objects
-$.getJSON("SmallObjects.json.js", function(data) {
-    Adventure.game.readObjects(data);
-});
+
+
+
 
 /*
 * Handles a command by ensuring that it is in the

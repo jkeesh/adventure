@@ -6,12 +6,12 @@
    },
    {
       "name": "Daniel Ellsberg",
-      "description": "I felt that as an American citizen, as a responsible citizen, I could no longer cooperate in concealing this information from the American public. I did this clearly at my own jeopardy and I am prepared to answer to all the consequences of this decision.",
+      "quote": "I felt that as an American citizen, as a responsible citizen, I could no longer cooperate in concealing this information from the American public. I did this clearly at my own jeopardy and I am prepared to answer to all the consequences of this decision.",
       "initialLoc": "2"
    },
    {
       "name": "John Perry Barlow",
-      "description": "The first serious infowar is now engaged. The field of battle is WikiLeaks. You are the troops.",
+      "quote": "The first serious infowar is now engaged. The field of battle is WikiLeaks. You are the troops.",
       "initialLoc": "3"
    }
 ]
