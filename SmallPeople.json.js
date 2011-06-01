@@ -13,5 +13,10 @@
       "name": "John Perry Barlow",
       "quote": "The first serious infowar is now engaged. The field of battle is WikiLeaks. You are the troops.",
       "initialLoc": "3"
+   },
+   {
+      "name": "John Locke",
+      "quote": "The end of law is not to abolish or restrain, but to preserve and enlarge freedom. For in all the states of created beings capable of law, where there is no law, there is no freedom.",
+      "initialLoc": "4"
    }
 ]

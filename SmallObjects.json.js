@@ -13,5 +13,10 @@
       "name": "ROD",
       "description": "a black rod with a rusty star",
       "initialLoc": "3"
+   },
+   {
+      "name": "IPHONE",
+      "description": "an iphone 4 who seems to have lost his owner",
+      "initialLoc": "4"
    }
 ]
