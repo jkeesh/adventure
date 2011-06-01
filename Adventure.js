@@ -5,7 +5,7 @@
 */
 var Adventure = { }
 Adventure.currentRoom = null;
-Adventure.cmdList = ["HELP", "LOOK", "INVENTORY", "DROP", "TAKE", "TALK"]
+Adventure.cmdList = ["HELP", "LOOK", "INVENTORY", "DROP", "TAKE", "TALK", "WHO"]
 Adventure.motionList = []
 Adventure.inventory = { };
 
@@ -73,12 +73,22 @@ Adventure.handleTalkCommand = function(cmd){
         for(var p in people){
             println(people[p].talk());
         }
+    }else if(cmd == "WHO"){
+        var people = this.currentRoom.people;
+        for(var p in people){
+            println(p);
+        }
     }
 }
 
 Adventure.handleSystemCommand = function(cmd) {
    if(cmd == "HELP") {
-      println("HELP TEXT");
+      println("Here are the list of commands in ETHICAL ADVENTURE");
+      println("LOOK         look around the room");
+      println("INVENTORY    show inventory");
+      println("WHO          show who is in the room");
+      println("TALK         get a person to talk");
+      
    } else if(cmd == "INVENTORY") {
       if(isEmptyObj(Adventure.inventory)) {
          println("Your inventory is empty.")
