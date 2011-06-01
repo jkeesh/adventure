@@ -51,7 +51,7 @@
    },
    {
       "name": "BREAKOUT",
-      "description": "a solution to the java assignment with bricks and paddles",
+      "description": "a breakout solution with questionable style",
       "initialLoc": "11"
    }
 ]
