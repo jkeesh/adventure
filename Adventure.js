@@ -125,6 +125,8 @@ Adventure.handleMotionCommand = function(cmd) {
          // display info about new room
          println(Adventure.currentRoom.description);
          println(Adventure.currentRoom.objectStr());
+         if(Adventure.currentRoom.hasPeople)
+            println("Someone is here.");
          
          // set flag indicating room changed
          roomChanged = true;
