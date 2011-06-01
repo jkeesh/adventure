@@ -53,5 +53,10 @@
       "name": "Zach Galant",
       "quote": "I like to read about basketball, and the national, traditional media doesn’t know as much about my local team. Blogs give people who are more knowledgeable a chance to write and distribute content, so I can read better, more informed articles.",
       "initialLoc": "12"
+   },
+   {
+      "name": "Thomas Paine",
+      "quote": "But such is the irresistable nature of truth, that all it asks, and all it wants is the liberty of appearing.",
+      "initialLoc": "15"
    }
 ]

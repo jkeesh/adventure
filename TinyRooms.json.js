@@ -147,7 +147,7 @@
       "motions": [
          {"dir": "WEST", "dest": "14"}
        ],
-      "info": ""
+      "info": "paine"
    }
  
 ]
