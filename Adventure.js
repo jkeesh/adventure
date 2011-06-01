@@ -110,6 +110,7 @@ Adventure.handleSystemCommand = function(cmd) {
       println("<span class='help'>TALK</span>get a person to talk, if only one in room");
       println("<span class='help'>TALK &lt;lastname&gt;</span>talk, if more than one person in room");
       println("<span class='help'>TAKE &lt;object&gt;</span>take an object in a room");
+      println("<span class='help'>DIR</span>move with NORTH, SOUTH, EAST, WEST, UP, and DOWN");
       
    } else if(cmd == "INVENTORY") {
       if(isEmptyObj(Adventure.inventory)) {

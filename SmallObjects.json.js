@@ -6,7 +6,7 @@
    },
    {
       "name": "TIME MACHINE",
-      "description": "a delorean dmc-12",
+      "description": "a time machine that look like a delorean dmc-12",
       "initialLoc": "1"
    },
    {
@@ -43,5 +43,15 @@
       "name": "MUG",
       "description": "a coffee mug that is half-full and slightly warm",
       "initialLoc": "6"
+   },
+   {
+      "name": "SLIDES",
+      "description": "a set of slides that contain leaked photos of a new iMac",
+      "initialLoc": "9"
+   },
+   {
+      "name": "BREAKOUT",
+      "description": "a breakout solution with questionable style",
+      "initialLoc": "11"
    }
 ]
