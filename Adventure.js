@@ -99,7 +99,7 @@ Adventure.handleSystemCommand = function(cmd) {
          }
       }
    } else if(cmd == "LOOK") {
-      println("YOU LOOKED AROUND THE ROOM")
+      println(this.currentRoom.description);
    }
 }
 
