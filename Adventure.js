@@ -5,7 +5,7 @@
 */
 var Adventure = { }
 Adventure.currentRoom = null;
-Adventure.cmdList = ["HELP", "LOOK", "INVENTORY", "DROP", "TAKE"]
+Adventure.cmdList = ["HELP", "LOOK", "INVENTORY", "DROP", "TAKE", "TALK"]
 Adventure.motionList = []
 Adventure.inventory = { };
 
@@ -63,7 +63,17 @@ Adventure.handleCommand = function(line) {
       if(Adventure.motionList.indexOf(cmd) != -1)
          Adventure.handleMotionCommand(cmd);
       Adventure.handleObjectCommand(cmd, item);
+      Adventure.handleTalkCommand(cmd);
    }
+}
+
+Adventure.handleTalkCommand = function(cmd){
+    if(cmd == "TALK"){
+        var people = this.currentRoom.people;
+        for(var p in people){
+            println(people[p].talk());
+        }
+    }
 }
 
 Adventure.handleSystemCommand = function(cmd) {
