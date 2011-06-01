@@ -74,18 +74,26 @@ Adventure.handleCommand = function(line) {
       if(Adventure.motionList.indexOf(cmd) != -1)
          Adventure.handleMotionCommand(cmd);
       Adventure.handleObjectCommand(cmd, item);
-      Adventure.handleTalkCommand(cmd);
+      Adventure.handleTalkCommand(cmd, item);
    }
 }
 
-Adventure.handleTalkCommand = function(cmd){
+Adventure.handleTalkCommand = function(cmd, rest){
     if(cmd == "TALK"){
         var people = this.currentRoom.people;
+        if(rest.length == 0 && count(people) > 1){
+            println("There is more than one person here! Who do you want to talk?");
+            return;
+        }
         for(var p in people){
-            println(people[p].talk());
+            if(rest.length == 0 || p.search(new RegExp(rest, "i")) != -1)
+                println(people[p].talk());
         }
     }else if(cmd == "WHO"){
         var people = this.currentRoom.people;
+        if(count(people) == 0){
+            println("There is no one else in the room.");
+        }
         for(var p in people){
             println(p);
         }
@@ -99,7 +107,8 @@ Adventure.handleSystemCommand = function(cmd) {
       println("<span class='help'>LOOK</span>look around the room");
       println("<span class='help'>INVENTORY</span>show inventory");
       println("<span class='help'>WHO</span>show who is in the room");
-      println("<span class='help'>TALK</span>get a person to talk");
+      println("<span class='help'>TALK</span>get a person to talk, if only one in room");
+      println("<span class='help'>TALK &lt;lastname&gt;</span>talk, if more than one person in room");
       println("<span class='help'>TAKE &lt;object&gt;</span>take an object in a room");
       
    } else if(cmd == "INVENTORY") {
@@ -116,6 +125,15 @@ Adventure.handleSystemCommand = function(cmd) {
 //      println(this.currentRoom.description);
    }
 }
+
+function count(o) {
+    var c = 0;
+    for(var i in o) 
+        if(o.hasOwnProperty(i))
+            c += 1;
+
+    return c;
+} 
 
 /*
 * Utility method to test if an object is empty in javascript
