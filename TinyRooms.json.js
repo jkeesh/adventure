@@ -46,7 +46,7 @@
       "name": "The steps of the Supreme Court",
       "description": "You are on the steps of the Supreme Court.",
       "motions": [
-         {"dir": "WEST", "dest": "7"},
+         {"dir": "WEST", "dest": "6"},
          {"dir": "OUT", "dest": "1"}
       ],
       "info": "supreme-court"
@@ -56,7 +56,7 @@
       "name": "In the New York Times editorial office",
       "description": "You are standing next to the editor-in-chief of the New York Times as he paces back and forth deciding if he should publish the Pentagon Papers.",
       "motions": [
-         {"dir": "WEST", "dest": "6"},
+         {"dir": "WEST", "dest": "7"},
          {"dir": "OUT", "dest": "1"}
       ],
       "info": "pentagon-papers"
