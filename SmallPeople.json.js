@@ -43,5 +43,10 @@
       "name": "Eric Conner",
       "quote": "I think blogs are interesting because.... put your quote here.",
       "initialLoc": "12"
+   },
+   {
+      "name": "Jeremy Keeshin",
+      "quote": "I think blogs are interesting because.... put your quote here.",
+      "initialLoc": "12"
    }
 ]

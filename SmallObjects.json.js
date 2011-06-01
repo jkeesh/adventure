@@ -53,5 +53,10 @@
       "name": "BREAKOUT",
       "description": "a breakout solution with questionable style",
       "initialLoc": "11"
+   },
+   {
+      "name": "CROSSWORD",
+      "description": "a half-completed Thursday crossword puzzle",
+      "initialLoc": "6"
    }
 ]
