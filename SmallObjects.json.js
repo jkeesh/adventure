@@ -5,6 +5,11 @@
       "initialLoc": "1"
    },
    {
+      "name": "TIME MACHINE",
+      "description": "a delorean dmc-12",
+      "initialLoc": "1"
+   },
+   {
       "name": "LAMP",
       "description": "a brightly shining brass lamp",
       "initialLoc": "2"

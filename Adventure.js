@@ -105,7 +105,8 @@ Adventure.handleSystemCommand = function(cmd) {
          }
       }
    } else if(cmd == "LOOK") {
-      println(this.currentRoom.description);
+       this.currentRoom.look();
+//      println(this.currentRoom.description);
    }
 }
 
@@ -129,8 +130,7 @@ Adventure.handleMotionCommand = function(cmd) {
          Adventure.currentRoom = Adventure.game.rooms[val.destRoomId];
          
          // display info about new room
-         println(Adventure.currentRoom.description);
-         println(Adventure.currentRoom.objectStr());
+         Adventure.currentRoom.look();
          if(Adventure.currentRoom.hasPerson)
             println("Someone is here.");
          Adventure.setInfo(Adventure.currentRoom.getInfo());
