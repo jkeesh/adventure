@@ -15,3 +15,5 @@ function AdvPerson(obj) {
 AdvPerson.prototype.talk = function(){
     return "<span class='quote'>" + this.quote + "-" + this.name +"</span>";
 }
+
+///test
