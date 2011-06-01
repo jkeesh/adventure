@@ -25,6 +25,7 @@ $.getJSON("TinyRooms.json.js", function(data) {
     
     // set default room
     Adventure.currentRoom = Adventure.game.rooms["1"];
+    Adventure.currentRoom.visited = true;
  
     // read in the objects
     $.getJSON("SmallObjects.json.js", function(data) {
@@ -94,10 +95,12 @@ Adventure.handleTalkCommand = function(cmd){
 Adventure.handleSystemCommand = function(cmd) {
    if(cmd == "HELP") {
       println("Here are the list of commands in ETHICAL ADVENTURE");
+      println("<span class='help'>HELP</span>display this help menu");
       println("<span class='help'>LOOK</span>look around the room");
       println("<span class='help'>INVENTORY</span>show inventory");
       println("<span class='help'>WHO</span>show who is in the room");
       println("<span class='help'>TALK</span>get a person to talk");
+      println("<span class='help'>TAKE &lt;object&gt;</span>take an object in a room");
       
    } else if(cmd == "INVENTORY") {
       if(isEmptyObj(Adventure.inventory)) {
@@ -132,9 +135,8 @@ Adventure.handleMotionCommand = function(cmd) {
       // user entered a valid direction so change the room
       if(cmd == val.direction) {
          Adventure.currentRoom = Adventure.game.rooms[val.destRoomId];
-         
          // display info about new room
-         Adventure.currentRoom.look();
+         Adventure.currentRoom.describe();
          if(Adventure.currentRoom.hasPerson)
             println("Someone is here.");
          Adventure.setInfo(Adventure.currentRoom.getInfo());

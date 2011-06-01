@@ -17,6 +17,16 @@
    {
       "name": "John Locke",
       "quote": "The end of law is not to abolish or restrain, but to preserve and enlarge freedom. For in all the states of created beings capable of law, where there is no law, there is no freedom.",
+      "initialLoc": "2"
+   },
+   {
+      "name": "John Milton",
+      "quote": "When as debtors and delinquents may walk abroad without a keeper, but unoffensive books must not stir forth without a visible jailer in their title.",
+      "initialLoc": "3"
+   },
+   {
+      "name": "John Stuart Mill",
+      "quote": "If all mankind minus one, were of one opinion, and one, and only one person were of the contrary opinion, mankind would be no more justified in silencing that one person, than he, if he had the power, would be justified in silencing mankind.",
       "initialLoc": "4"
    }
 ]
