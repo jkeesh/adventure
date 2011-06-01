@@ -84,10 +84,10 @@ Adventure.handleTalkCommand = function(cmd){
 Adventure.handleSystemCommand = function(cmd) {
    if(cmd == "HELP") {
       println("Here are the list of commands in ETHICAL ADVENTURE");
-      println("LOOK         look around the room");
-      println("INVENTORY    show inventory");
-      println("WHO          show who is in the room");
-      println("TALK         get a person to talk");
+      println("<span class='help'>LOOK</span>look around the room");
+      println("<span class='help'>INVENTORY</span>show inventory");
+      println("<span class='help'>WHO</span>show who is in the room");
+      println("<span class='help'>TALK</span>get a person to talk");
       
    } else if(cmd == "INVENTORY") {
       if(isEmptyObj(Adventure.inventory)) {

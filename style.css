@@ -89,6 +89,12 @@ span.author {
 	font-weight: bold;
 }
 
+span.help{
+    width: 100px;
+    display: block;
+    float: left;
+}
+
 #extra {
 	width: 100%;
 	min-height: 400px;
