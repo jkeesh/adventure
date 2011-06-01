@@ -27,7 +27,7 @@ $(document).bind('startGame', function(){
         else return true;
       },
       commandHandle:function(line){
-          Adventure.handleCommand(line);
+          Adventure.handleCommand(line.toUpperCase());
           return true;
       },
       animateScroll:true,
