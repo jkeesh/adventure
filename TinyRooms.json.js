@@ -31,10 +31,11 @@
    {
       "id": "4",
       "name": "On the side of the Thames River",
-      "description": "It is 1806, and you are beside the Thames River, where a small band is playing. You can walk up the river to the north.",
+      "description": "It is 1806, and you are beside the Thames River, where a small band is playing. You can walk up the river to the north. Or to the east there is a path.",
       "motions": [
          {"dir": "WEST", "dest": "3"},
-         {"dir": "NORTH", "dest": "5"}
+         {"dir": "NORTH", "dest": "5"},
+         {"dir": "EAST", "dest": "14"}
       ],
       "info": "mill"
    },
@@ -127,6 +128,26 @@
          {"dir": "WEST", "dest": "1"}
        ],
       "info": "references"
+   },
+   {
+      "id": "14",
+      "name": "Yellow Wood",
+      "description": "You are in a yellow wood. There are two paths that diverge. The path to the north looks quite popular, but the path to the east has not had nearly as many people walk it. You came from the west.",
+      "motions": [
+         {"dir": "WEST", "dest": "4"},
+         {"dir": "NORTH", "dest": "5"},
+         {"dir": "EAST", "dest": "15"}
+       ],
+      "info": ""
+   },
+   {
+      "id": "15",
+      "name": "Dark Alley",
+      "description": "You are in a narrow and dark alley. There is no way out but the way you came.",
+      "motions": [
+         {"dir": "WEST", "dest": "14"}
+       ],
+      "info": ""
    }
  
 ]
