@@ -47,7 +47,7 @@
    {
       "name": "SLIDES",
       "description": "a set of slides that contain leaked photos of a new iMac",
-      "initialLoc": "6"
+      "initialLoc": "9"
    },
    {
       "name": "BREAKOUT",
