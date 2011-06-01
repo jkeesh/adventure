@@ -38,5 +38,10 @@
       "name": "IPHONE",
       "description": "an iphone 4 who seems to have lost his owner",
       "initialLoc": "8"
+   },
+   {
+      "name": "MUG",
+      "description": "a coffee mug that is half-full and slightly warm",
+      "initialLoc": "6"
    }
 ]
