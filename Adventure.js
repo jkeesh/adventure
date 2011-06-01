@@ -5,7 +5,7 @@
 */
 var Adventure = { }
 Adventure.currentRoom = null;
-Adventure.cmdList = ["HELP", "LOOK", "INVENTORY", "DROP", "TAKE"]
+Adventure.cmdList = ["HELP", "LOOK", "INVENTORY", "DROP", "TAKE", "TALK"]
 Adventure.motionList = []
 Adventure.inventory = { };
 
@@ -25,12 +25,19 @@ $.getJSON("TinyRooms.json.js", function(data) {
     
     // set default room
     Adventure.currentRoom = Adventure.game.rooms["1"];
+    $(document).trigger('startGame');
+    // read in the objects
+    $.getJSON("SmallObjects.json.js", function(data) {
+        Adventure.game.readObjects(data);
+    });
+    $.getJSON("SmallPeople.json.js", function(data){
+        Adventure.game.readPeople(data);
+    })
 });
 
-// read in the objects
-$.getJSON("SmallObjects.json.js", function(data) {
-    Adventure.game.readObjects(data);
-});
+
+
+
 
 /*
 * Handles a command by ensuring that it is in the
@@ -56,7 +63,17 @@ Adventure.handleCommand = function(line) {
       if(Adventure.motionList.indexOf(cmd) != -1)
          Adventure.handleMotionCommand(cmd);
       Adventure.handleObjectCommand(cmd, item);
+      Adventure.handleTalkCommand(cmd);
    }
+}
+
+Adventure.handleTalkCommand = function(cmd){
+    if(cmd == "TALK"){
+        var people = this.currentRoom.people;
+        for(var p in people){
+            println(people[p].talk());
+        }
+    }
 }
 
 Adventure.handleSystemCommand = function(cmd) {

@@ -6,6 +6,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
 <script type="text/javascript" src="jquery.console.js"></script>
 
+<script type="text/javascript" src="AdvPerson.js"></script>
 <script type="text/javascript" src="AdvObject.js"></script>
 <script type="text/javascript" src="AdvMotionTableEntry.js"></script>
 <script type="text/javascript" src="AdvRoom.js"></script>
@@ -13,7 +14,7 @@
 <script type="text/javascript" src="Adventure.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function(){
+$(document).bind('startGame', function(){
 	/* Second console */
 	var console = $(".console");
     var controller = console.console({
@@ -69,13 +70,6 @@ h1 {
 	overflow: scroll;
 }
 
-input{
-	width: 600px;
-	height: 30px;
-	padding: 5px;
-	font-size: 13px;
-	margin-top: 10px;
-}
 
 div.console { font-size: 14px; margin-top:1em }
  div.console div.jquery-console-inner 
@@ -111,6 +105,13 @@ div.console { font-size: 14px; margin-top:1em }
  p {
      line-height: 1.3em;
      color: #333;
+
+ span.quote{
+	color: #2966B8;
+}
+
+ #extra {
+     width: 100%; min-height: 400px;
  }
 </style>
 	

@@ -17,6 +17,11 @@ function AdvRoom(roomObj) {
 	});
 	
 	this.objects = {};
+	this.people = {};
+}
+
+AdvRoom.prototype.addPerson = function(person){
+    this.people[person.name] = person;
 }
 
 AdvRoom.prototype.addObject = function(obj) {
