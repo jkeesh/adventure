@@ -91,8 +91,8 @@
    },
    {
       "id": "10",
-      "name": "What is a blog?",
-      "description": "Blog 1 Description. Move on to the west.",
+      "name": "CS105 Lecture",
+      "description": "You are in the top row of Hewlett 200 for CS105, as the lecturer explains simple HTML and CSS. You supposedly needs these tools to make your first simple website. You are on your way to becoming a blogger. You can leave class to the west.",
       "motions": [
          {"dir": "WEST", "dest": "11"},
          {"dir": "EAST", "dest": "6"}
@@ -101,8 +101,8 @@
    },
    {
       "id": "11",
-      "name": "Issues with Blogs",
-      "description": "Blog 2 Description. Move on to the east.",
+      "name": "The LAIR",
+      "description": "The LAIR doesn't help you if you are in CS105, but you go there anyway. You see dozens of students with their heads tucked down staring at their computers. You see a stray printout in the corner which contains the solutions to the Breakout assignment. You aren't in CS106A, but you might be in the future. Leave to the east, or continue north.",
       "motions": [
          {"dir": "EAST", "dest": "10"},
          {"dir": "NORTH", "dest": "12"}

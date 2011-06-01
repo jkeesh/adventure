@@ -48,5 +48,10 @@
       "name": "SLIDES",
       "description": "a set of slides that contain leaked photos of a new iMac",
       "initialLoc": "6"
+   },
+   {
+      "name": "BREAKOUT",
+      "description": "a solution to the java assignment with bricks and paddles",
+      "initialLoc": "11"
    }
 ]
