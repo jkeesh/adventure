@@ -39,6 +39,21 @@ AdvRoom.prototype.removeObject = function(key) {
    delete this.objects[key];
 }
 
+AdvRoom.prototype.describe = function(force){
+    if(!this.visited)
+        println(this.description);
+    else
+        println(this.name);
+    
+    println(this.objectStr());
+    this.visited = true;
+}
+
+AdvRoom.prototype.look = function(){
+    println(this.description);
+    println(this.objectStr());
+}
+
 /*
 * Get a string listing the objects currently in this room.
 */
