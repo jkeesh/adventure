@@ -8,7 +8,9 @@
 function AdvMotionTableEntry(mteObj) {
 	this.direction = mteObj.dir;
 	this.destRoomId = mteObj.dest;
-	this.keyName = mteObj.key;
+	this.keysRequired = [ ]
+	if(mteObj.keyStr !== undefined)
+	   this.keysRequired = mteObj.keyStr.split(",");
 	
 	window.console.log(this);
 }

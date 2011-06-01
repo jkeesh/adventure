@@ -4,7 +4,7 @@
       "name": "Outside building",
       "description": "You are standing at the end of a road before a small brick building. A small stream flows out of the building and down a gully to the south. A road runs up a small hill to the west.",
       "motions": [
-         {"dir": "WEST", "dest": "2"}
+         {"dir": "WEST", "dest": "2", "keyStr": "TIME MACHINE"}
       ],
       "info": "outside-building"
    },
