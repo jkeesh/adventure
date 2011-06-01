@@ -35,6 +35,11 @@ $(document).bind('startGame', function(){
                     'Ethical gray areas exist around all corners in this world.  Choose your path wisely.\n\n' 
                     + Adventure.currentRoom.description
     });
+    
+    $("a", ".extra").bind("click", function(e) {
+        var data = $("#" + $(this).attr("data-load")).html();
+        $("#extra-container").html(data);
+    });
 });
 </script>
 	
@@ -87,6 +92,19 @@ div.console { font-size: 14px; margin-top:1em }
  span.item {
      color: green;
  }
+ 
+ #extra-container {
+     width: 100%; 
+     min-height: 400px;
+     display: block;
+ }
+ .extra {
+     display: none;
+ }
+ 
+ p {
+     line-height: 1.3em;
+     color: #333;
 
  span.quote{
 	color: #2966B8;
@@ -106,17 +124,22 @@ div.console { font-size: 14px; margin-top:1em }
 	</title>
 </head>
 
-
-
 <div id="wrapper">
 	<h1>Press Freedom for Bloggers</h1>
 	<h2>Eric Conner, Zach Galant, and Jeremy Keeshin</h2>
 	<div class="console"></div>
-	<div id="extra">
+	<div id="extra-container" class="extra">
 	   <h1 style="margin-top: 30px;">Extra Info</h1>
-	   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare elit vitae dui ultrices molestie. Donec sit amet quam libero. Praesent quam lacus, egestas et porta ac, pretium non dui. Praesent gravida pharetra ante rhoncus fermentum. Ut scelerisque neque vel ipsum pulvinar ullamcorper. Nunc consectetur ipsum non odio ullamcorper condimentum. Nulla ac sollicitudin dui. Vestibulum eget quam odio, sit amet sollicitudin tellus. Praesent dapibus metus quis erat blandit sit amet sodales risus placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam sit amet magna ipsum, eget suscipit erat. Vivamus nisi risus, ultrices quis semper quis, sodales eget nisi.</p>
+	   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare elit vitae dui ultrices molestie. Donec sit amet quam libero. Praesent quam lacus, egestas et porta ac, pretium non dui. Praesent gravida pharetra ante rhoncus fermentum. Ut scelerisque neque vel ipsum pulvinar ullamcorper. Nunc consectetur ipsum non odio ullamcorper condimentum. <a data-load="overview" href="#nohash">Nulla</a> ac sollicitudin dui. Vestibulum eget quam odio, sit amet sollicitudin tellus. Praesent dapibus metus quis erat blandit sit amet sodales risus placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam sit amet magna ipsum, eget suscipit erat. Vivamus nisi risus, ultrices quis semper quis, sodales eget nisi.</p>
 
-       <p>Nulla justo nisi, venenatis a porttitor nec, scelerisque id leo. Ut quis orci nisl. In hac habitasse platea dictumst. Aenean ut velit in felis rutrum rhoncus eget non libero. Proin semper enim ac dui interdum vel adipiscing mi euismod. Suspendisse vitae eros quis eros ullamcorper commodo vel sed enim. Morbi pellentesque luctus nisi, non malesuada ipsum semper nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In vestibulum dictum iaculis. Nullam dui arcu, imperdiet quis lobortis quis, scelerisque at metus. Nunc in lacus a ipsum vehicula sollicitudin. Aliquam ullamcorper eleifend sem, eget hendrerit urna euismod eu. In hac habitasse platea dictumst. Nunc a quam eu nunc interdum scelerisque. Nunc iaculis sodales erat et malesuada. Nam vitae auctor lectus. Vivamus enim nulla, laoreet non mollis eu, ornare ut ligula. Sed purus metus, aliquam in pulvinar in, iaculis eget lacus. Nunc tincidunt arcu eu lorem accumsan aliquam.</p>
+       <p>Nulla justo nisi, venenatis a porttitor nec, <a data-load="overview" href="#nohash">scelerisque</a> id leo. Ut quis orci nisl. In hac habitasse platea dictumst. Aenean ut velit in felis rutrum rhoncus eget non libero. Proin semper enim ac dui interdum vel adipiscing mi euismod. Suspendisse vitae eros quis eros ullamcorper commodo vel sed enim. Morbi pellentesque luctus nisi, non malesuada ipsum semper nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In vestibulum dictum iaculis. Nullam dui arcu, imperdiet quis lobortis quis, scelerisque at metus. Nunc in lacus a ipsum vehicula sollicitudin. Aliquam ullamcorper eleifend sem, eget hendrerit urna euismod eu. In hac habitasse platea dictumst. Nunc a quam eu nunc interdum scelerisque. Nunc iaculis sodales erat et malesuada. Nam vitae auctor lectus. Vivamus enim nulla, laoreet non mollis eu, ornare ut ligula. Sed purus metus, aliquam in pulvinar in, iaculis eget lacus. Nunc tincidunt arcu eu lorem accumsan aliquam.</p>
+	</div>
+	
+	<div id="overview" class="extra">
+	    <h1 style="margin-top: 30px;">Extra Info</h1>
+ 	   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare elit vitae dui ultrices molestie. Donec sit amet quam libero. Praesent quam lacus, egestas et porta ac, pretium non dui. Praesent gravida pharetra ante rhoncus fermentum. Ut scelerisque neque vel ipsum pulvinar ullamcorper. Nunc consectetur ipsum non odio ullamcorper condimentum. Nulla ac sollicitudin dui. Vestibulum eget quam odio, sit amet sollicitudin tellus. Praesent dapibus metus quis erat blandit sit amet sodales risus placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam sit amet magna ipsum, eget suscipit erat. Vivamus nisi risus, ultrices quis semper quis, sodales eget nisi.</p>
+
+        <p>Nulla justo nisi, venenatis a porttitor nec, scelerisque id leo. Ut quis orci nisl. In hac habitasse platea dictumst. Aenean ut velit in felis rutrum rhoncus eget non libero. Proin semper enim ac dui interdum vel adipiscing mi euismod. Suspendisse vitae eros quis eros ullamcorper commodo vel sed enim. Morbi pellentesque luctus nisi, non malesuada ipsum semper nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In vestibulum dictum iaculis. Nullam dui arcu, imperdiet quis lobortis quis, scelerisque at metus. Nunc in lacus a ipsum vehicula sollicitudin. Aliquam ullamcorper eleifend sem, eget hendrerit urna euismod eu. In hac habitasse platea dictumst. Nunc a quam eu nunc interdum scelerisque. Nunc iaculis sodales erat et malesuada. Nam vitae auctor lectus. Vivamus enim nulla, laoreet non mollis eu, ornare ut ligula. Sed purus metus, aliquam in pulvinar in, iaculis eget lacus. Nunc tincidunt arcu eu lorem accumsan aliquam.</p>
 	</div>
 </div>
 </html>
