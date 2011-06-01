@@ -25,7 +25,8 @@ p {
 
 .info-paragraph{
     margin: 12px 0px;
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 #wrapper {
