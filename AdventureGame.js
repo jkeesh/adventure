@@ -5,10 +5,11 @@
 * the state of the game
 */
 function AdventureGame() {
-   this.rooms = {};      // associative array of roomId => room object
-   this.objects = [];  // array of AdvObjects
-   this.synonyms = null; // associative array of strings synonym => synonym
-   this.motions = [];    // array of string motion commands in game
+   this.rooms = {};         // associative array of roomId => room object
+   this.objects = [];       // array of AdvObjects
+   this.people = [];        // array of AdvPerson
+   this.synonyms = null;    // associative array of strings synonym => synonym
+   this.motions = [];       // array of string motion commands in game
 }
 
 /*
@@ -35,11 +36,11 @@ AdventureGame.prototype.readPeople = function(peopleArr){
     var self = this;
     
     $(peopleArr).each(function(idx, val){
-        console.log(idx);
-        console.log(val);
         var curPerson = new AdvPerson(val);
-        console.log(curPerson);
+        self.people.push(curPerson);
+        self.rooms[curPerson.initialRoomId].addPerson(curPerson);
     });
+    console.log(self.rooms);
 }
 
 /*
