@@ -14,7 +14,7 @@
       "description": "You are at the outside a blacksmith's shop in Essex, England.  It is the year 1688.  The Glorious Revolution has just occurred in England.  On your journey through the valley you published a pamphlet criticizing the monarchy and have been tried for seditious libel.  Luckily this is a period of revolution and several influential philosophers are around to help you out. There is more help to the south.",
       "motions": [
          {"dir": "SOUTH", "dest": "3"},
-         {"dir": "EAST",  "dest": "2"}
+         {"dir": "EAST",  "dest": "1"}
       ],
       "info": "locke"
    },
