@@ -1,5 +1,9 @@
-*{
+.console{
 	font-family: 'Andale Mono', courier, Helvetica;
+}
+
+body{
+    font-family: 'lucida grande', tahoma;
 }
 
 h1 {
@@ -17,6 +21,11 @@ p {
 
 .invisible{
     display:none;
+}
+
+.info-paragraph{
+    margin: 12px 0px;
+    font-size: 13px;
 }
 
 #wrapper {
@@ -80,6 +89,7 @@ span.item {
 	width: 100%;
 	min-height: 400px;
 	display: block;
+	padding-top: 20px;
 }
 .extra {
 	display: none;
