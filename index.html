@@ -34,8 +34,9 @@ $(document).bind('startGame', function(){
       promptHistory:true,
           // output description for default room
       welcomeMessage:'Welcome to a world in which decisions have consequences. '+
-                    'Ethical gray areas exist around all corners in this world.  Choose your path wisely.\n\n' 
+                    'Ethical gray areas exist around all corners in this world.  Choose your path wisely.\n\n'
                     + Adventure.currentRoom.description + "\n" + Adventure.currentRoom.objectStr()
+ 					+ 'Type HELP for more info\n'
     });
     
     $("a", ".extra").bind("click", function(e) {
