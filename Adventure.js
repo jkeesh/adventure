@@ -58,8 +58,12 @@ Adventure.handleCommand = function(line) {
    // split the command into components
    var cmd = tokens[0];
    var item = "";
-   if(tokens.length > 1)
-      item = tokens[1];
+   if(tokens.length > 1){
+        for(var i = 1; i < tokens.length; i++){
+            item += tokens[i] + " ";
+        }
+        item = $.trim(item);
+   }
       
    // ensure valid command and call appropriate handlers
    if(Adventure.cmdList.indexOf(cmd) == -1)
