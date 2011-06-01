@@ -36,7 +36,9 @@ $.getJSON("TinyRooms.json.js", function(data) {
 });
 
 
-
+Adventure.setInfo = function(info){
+    $("#extra-container").html(info);
+}
 
 
 /*
@@ -125,6 +127,7 @@ Adventure.handleMotionCommand = function(cmd) {
          // display info about new room
          println(Adventure.currentRoom.description);
          println(Adventure.currentRoom.objectStr());
+         Adventure.setInfo(Adventure.currentRoom.getInfo());
          
          // set flag indicating room changed
          roomChanged = true;

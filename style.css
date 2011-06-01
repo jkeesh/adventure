@@ -15,6 +15,10 @@ p {
 	color: #333;
 }
 
+.invisible{
+    display:none;
+}
+
 #wrapper {
 	width: 640px;
 	margin: 0 auto;
