@@ -41,12 +41,17 @@
    },
    {
       "name": "Eric Conner",
-      "quote": "I think blogs are interesting because.... put your quote here.",
+      "quote": "I think bloggers should have the same rights as journalists, but I see a tension between giving bloggers the same rights when bloggers aren't held up to the same journalistic standards in terms of source confirmation.  Because of this bloggers could use illegal materials like a stolen slide deck as a confidential source.",
       "initialLoc": "12"
    },
    {
       "name": "Jeremy Keeshin",
-      "quote": "I think blogs are interesting because.... put your quote here.",
+      "quote": "With freedom of the press it is important to note the difference between a harmful personal threat and a harmful business threat. I think there is a difference between speech that incites violence and speech that reveals corporate secrets, and I would be harsher on the speech that incites violence.",
+      "initialLoc": "12"
+   },
+   {
+      "name": "Zach Galant",
+      "quote": "I like to read about basketball, and the national, traditional media doesn’t know as much about my local team. Blogs give people who are more knowledgeable a chance to write and distribute content, so I can read better, more informed articles.",
       "initialLoc": "12"
    }
 ]
