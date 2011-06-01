@@ -115,4 +115,7 @@ span.help{
 	min-height: 400px;
 }
 
-</style>
+.body-im {
+    float: left;
+    padding: 10px;
+}
