@@ -43,5 +43,10 @@
       "name": "MUG",
       "description": "a coffee mug that is half-full and slightly warm",
       "initialLoc": "6"
+   },
+   {
+      "name": "SLIDES",
+      "description": "a set of slides that contain leaked photos of a new iMac",
+      "initialLoc": "6"
    }
 ]

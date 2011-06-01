@@ -28,5 +28,10 @@
       "name": "John Stuart Mill",
       "quote": "If all mankind minus one, were of one opinion, and one, and only one person were of the contrary opinion, mankind would be no more justified in silencing that one person, than he, if he had the power, would be justified in silencing mankind.",
       "initialLoc": "4"
+   },
+   {
+      "name": "Julian Assange",
+      "quote": "The aim of Wikileaks is to achieve just reform around the world and do it through the mechanism of transparency",
+      "initialLoc": "7"
    }
 ]
