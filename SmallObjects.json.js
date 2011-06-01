@@ -58,5 +58,10 @@
       "name": "CROSSWORD",
       "description": "a half-completed Thursday crossword puzzle",
       "initialLoc": "6"
+   },
+   {
+      "name": "LAPTOP",
+      "description": "a white Macbook laptop with lots of scratches",
+      "initialLoc": "7"
    }
 ]

@@ -55,14 +55,14 @@
       "motions": [
          {"dir": "EAST", "dest": "7"},
          {"dir": "DOWN", "dest": "5"},
-         {"dir": "WEST", "dest": "10"}
+         {"dir": "WEST", "dest": "10", "keyStr": "LAPTOP"}
       ],
       "info": "pentagon-papers"
    },
    {
       "id": "7",
       "name": "The WikiLeaks headquarters in Stockholm, Sweden",
-      "description": "You are 100 feet below ground in a room with green plants, solar lighting, and a buzzing humidifier. This room only has one entrance. Leave to the south.",
+      "description": "You are 100 feet below ground in a room with green plants, solar lighting, and a buzzing humidifier. This room only has one entrance. Leave to the south. Or exit west.",
       "motions": [
          {"dir": "SOUTH", "dest": "8"},
          {"dir": "WEST", "dest": "6"}
