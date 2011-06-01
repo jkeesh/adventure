@@ -111,8 +111,8 @@
    },
    {
       "id": "12",
-      "name": "Positive Impact of Blogging",
-      "description": "Blog Next. You can go back home to the north.",
+      "name": "CS181 Section",
+      "description": "You sit around a table for CS181 section and realize the positive implications of blogging. Now that the barrier to entry in publication has been lowered, the internet has become a tool for the spread of knowledge across the world. More references to the north.",
       "motions": [
          {"dir": "SOUTH", "dest": "11"},
          {"dir": "NORTH", "dest": "13"}

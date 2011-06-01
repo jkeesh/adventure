@@ -33,5 +33,15 @@
       "name": "Julian Assange",
       "quote": "The aim of Wikileaks is to achieve just reform around the world and do it through the mechanism of transparency",
       "initialLoc": "7"
+   },
+   {
+      "name": "Eric Roberts",
+      "quote": "A+!",
+      "initialLoc": "12"
+   },
+   {
+      "name": "Eric Conner",
+      "quote": "I think blogs are interesting because.... put your quote here.",
+      "initialLoc": "12"
    }
 ]
